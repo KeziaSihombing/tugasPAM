@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FF3D84"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avatar App"
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="363dp"
+        android:layout_height="664dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/face_0004" />
+
+    <ImageView
+        android:id="@+id/eyeImg"
+        android:layout_width="225dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="288dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/face_0003" />
+
+    <ImageView
+        android:id="@+id/browImg"
+        android:layout_width="305dp"
+        android:layout_height="27dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/eyeImg"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/face_0001" />
+
+    <ImageView
+        android:id="@+id/noseImg"
+        android:layout_width="69dp"
+        android:layout_height="43dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/eyeImg"
+        app:layout_constraintVertical_bias="0.207"
+        app:srcCompat="@drawable/face_0002" />
+
+    <ImageView
+        android:id="@+id/mouthImg"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/eyeImg"
+        app:layout_constraintVertical_bias="0.111"
+        app:srcCompat="@drawable/face_0000" />
+
+    <CheckBox
+        android:id="@+id/browcheckBox"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:checked="false"
+        android:clickable="true"
+        android:focusable="auto"
+        android:text="@string/brow"
+        android:textColor="#E65100"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/eyeCheckBox"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:text="@string/eye"
+        android:textColor="#E65100"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/browcheckBox" />
+
+    <CheckBox
+        android:id="@+id/noseCheckBox"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/nose"
+        android:textColor="#E65100"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/eyeCheckBox" />
+
+    <CheckBox
+        android:id="@+id/mouthCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:text="Mouth"
+        android:textColor="#BF360C"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/noseCheckBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
